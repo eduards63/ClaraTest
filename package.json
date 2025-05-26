@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "cypress.config.js",
   "scripts": {
-  "start": "serve -s ./public",
-  "build": "echo \"No build step needed\"",
-
+    "start": "serve -s ./public",
+    "build": "echo \"No build step needed\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,6 +12,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "cypress": "^14.4.0",
     "mochawesome": "^7.1.3",
     "serve": "^14.2.4"
   }
