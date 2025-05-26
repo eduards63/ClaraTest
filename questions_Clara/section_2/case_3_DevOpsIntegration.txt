@@ -1,0 +1,23 @@
+Your organization is adopting more advanced DevOps and CI/CD practices.
+
+Explain how you would integrate automated tests into a CI/CD pipeline
+    Response:
+    I believe that for a successful integration of automated test cases into the CI/CD pipeline, tests should be included at every 
+    stage of the process. In the CI phase, unit tests and integration tests should be executed with every commit to help detect errors early.
+    In the CD phase, end-to-end tests, performance tests, and security tests (if there is a QA specialist for these) should be run to ensure
+    quality without compromising security or performance when deploying to staging or production.
+
+Describe what metrics you would establish to evaluate the quality and performance of tests
+    Response:
+    For me, the key metrics to monitor in order to ensure quality and performance are code coverage, pass/fail rate, execution time, and early 
+    bug detection. Other metrics may vary depending on the project and whether they should be implemented.
+    There are also tools like SonarQube (which I have worked with) that help streamline code tracking and make it easier to generate these 
+    types of reports.
+
+
+Detail how you would handle quick feedback on code quality
+    Response:
+    I believe that integrating applications like SonarQube, which run directly within the CI pipeline, helps reduce the time required to complete
+     a pull request (PR) and provides fast feedback on code quality.
+    I would also integrate this with a team communication channel or via email to send reports and alerts, ensuring higher code quality.
+    

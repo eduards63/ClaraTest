@@ -1,5 +1,10 @@
 Clara Automation Test with Saucedemo Page
 
+-----------------------------------------------------
+**The Question for Part 1 and Case Analysis for Part 2 of the test you can find
+in the folder question_Clara divide in sections.**
+
+-----------------------------------------------------
 Table of Contents:
 
 Prerequisites
