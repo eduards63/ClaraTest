@@ -1,0 +1,7 @@
+Explanation of design decisions made:
+
+The framework was designed with maintainability and scalability as core principles, adopting the Page Object Model (POM) to separate test logic from UI selectors,
+making tests more resilient to changes. Cypress was chosen over Selenium for its built-in features like automatic waiting and real-time reloads, significantly reducing flakiness.
+Multi-environment support was implemented through config files to enable testing across different stages without code changes. API testing was integrated alongside UI tests for comprehensive validation,
+while data-driven testing via JSON fixtures allows for easy test case expansion. The inclusion of parallel execution and CI/CD integration optimizes feedback speed, and code coverage ensures test effectiveness.
+Multi-language support and automated reporting make the framework adaptable for global teams and stakeholders.
