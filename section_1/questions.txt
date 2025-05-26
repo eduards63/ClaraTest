@@ -1,0 +1,78 @@
+1. Explain the difference between functional and non-functional testing. Provide examples of each in the context of web applications.
+    Response:
+    //Functional:
+    The difference between functional and non-functional testing is that functional testing verifies that the software operates according to the requirements specified by the PM
+    or the client. 
+    The types of functional testing include unit testing, which is used to test specific modules or functions separately within the code.
+    Unit tests help identify errors in the early stages of development and contribute to documenting the evolving code.
+    Integration and acceptance testing also fall under functional testing. Some examples include validating/verifying that the 
+    "Login" button successfully initiates a session or that the "Save" button correctly stores the data.
+    
+    //Non-functional:
+    And the non-functional testing aspect includes tests focused on stability, performance, speed, security, and other factors.
+    For example, performance or load testing involves validating whether a webpage loads within 2 to 3 seconds or whether the application can support 1,000 or more 
+    simultaneous users. These tests help assess the current capacity of the app and determine whether optimizations are needed to enhance the user experience
+
+2. Describe the concept of "Shift-Left Testing" and how you would implement this approach in an agile development team.
+    Response:
+    The concept of "Shift-left Testing" emphasizes the idea of starting testing early in the project by integrating the QA team from the beginning of the development life cycle,
+     rather than waiting until the later stages to conduct various tests. This approach enhances performance and progress from the project's inception, helping to detect errors as
+    early as possible, improving collaboration between developers and QA engineers, and enabling the early integration of processes such as CI/CD.
+
+    From what I have observed (since I have never been a lead or part of a project from its inception), its implementation often involves conducting tests from the design phase by
+    creating test cases or user stories using the user behavior-driven development method (following the Given, When, Then structure) to establish a clear example of what needs to
+    be achieved. Additionally, Test-Driven Development (TDD) is used to begin writing unit tests to verify individual functions separately. The next step is automating as much as
+    possible, including UI tests and CI/CD processes for future commits.
+
+3. Explain the testing pyramid and how you would determine the optimal distribution between different types of tests for a web application.
+    Response:
+    The testing pyramid is a guiding framework that helps balance different types of automated tests to ensure efficient and reliable quality assurance. It emphasizes starting 
+    with low-level tests, which are faster, such as unit tests, and gradually progressing to higher-level tests, which tend to be slower. The mid-level of the pyramid consists 
+    of integration testing, followed by end-to-end (E2E) testing, which can be more costly to implement.
+
+    There isn’t a universally ideal distribution for applying the testing pyramid, but a common approach could be 65% unit tests, 25% integration tests, and 10% E2E tests
+    to maintain a well-structured testing strategy.
+
+4. Detail the best practices for maintaining a stable and sustainable automation framework in the long term.
+    Response:
+    I believe it starts with establishing a solid modular structure, following strategies like SOLID principles to avoid duplicate code while keeping test logic separate from test data
+     and using dependency injection for reusable components.
+    For better stability and reliability, it’s essential to use explicit waits instead of relying on a general wait to improve execution speed.
+    Each test should run independently to prevent shared assets or states across tests. Additionally, maintaining data integrity before and after each execution—including cookies,
+    cache, and the database—is crucial.
+    Keeping updated documentation is vital to track changes in components or features, ensuring necessary updates when modifications occur. Monitoring test 
+    reports also provides visibility into failures and their locations, allowing for better execution oversight and issue resolution.
+
+5. Explain how you would handle test automation in an application with asynchronous or dynamic components.
+    Response:
+    In applications with asynchronous or dynamic components, test automation requires robust strategies such as explicit waits (avoiding static `sleep()`), stable element 
+    selection (using `data-testid` instead of fragile XPaths), and patterns like retry-ability (smart retries on assertions). 
+    Cypress natively supports asynchronous handling (e.g., `cy.intercept()`), allowing for more reliable testing. The key is to isolate timing uncertainty without compromising 
+    execution speed.
+
+6. What are the advantages and disadvantages of using XPath selectors versus CSS selectors in automated tests?
+    Response:
+    XPath is more flexible when it comes to complex searches, allowing navigation through the DOM in any direction, filtering by text, or targeting nested attributes. This makes it 
+    useful for dynamic elements that don’t have unique identifiers. However, it tends to be slower, more fragile when dealing with structural changes in HTML, and harder to read.
+    On the other hand, CSS selectors are faster, more readable, and efficient for elements with defined classes or IDs. But they do have limitations—they can't search by text or traverse 
+    ancestor elements. 
+    The best approach is to prioritize CSS selectors for straightforward cases and use XPath when dealing with complex scenarios where CSS falls short. Ideally, both should be 
+    combined with static attributes like `data-testid` to improve robustness and reliability.
+
+7. Describe your strategies for handling test data in an automation environment.
+    Response:
+    For managing test data in automation, I use a multi-layered approach that combines static, dynamic, and environment-independent data. Static data, such as fixtures or JSON files,
+     ensures predictable values, while dynamic data—generated at runtime using libraries like Faker—provides unique emails and random dates. Environment-independent data is 
+     abstracted into formats like YAML or CSV to enhance flexibility across different test scenarios. In end-to-end (E2E) testing, I apply the Test Data Builder pattern to construct
+      complex entities, such as users with associated addresses, and document dependencies between data points to prevent hidden couplings in test cases. This structured approach 
+      improves test reliability, scalability, and maintainability.
+
+8. Explain how you would implement REST API testing within your web automation strategy.
+    Response:
+    To integrate REST API testing into a web automation strategy, I follow a structured approach that combines tools like RestAssured, and Postman to validate API contracts,
+    check expected behaviors, and ensure seamless integrations between the database and UI.
+    I streamline test data management by using JSON fixtures for static payloads and Faker for generating dynamic data. Authentication is automated with reusable JWT tokens,
+    and assertions are reinforced with jsonschema validation.
+    For critical test cases, API and UI tests are synchronized—for example, I generate data via API before testing UI workflows or verify database actions triggered by frontend 
+    interactions. This approach ensures strong test coverage, maintainability with reusable code, and reliable execution while minimizing test flakiness through detailed logs 
+    and intelligent retries.

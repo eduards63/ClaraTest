@@ -1,0 +1,27 @@
+Your company is growing rapidly, and the number of product features increases every sprint. The execution time of automated tests has doubled in the last 3 months.
+
+Propose a strategy to reduce execution time without compromising coverage:
+    Response:
+    To improve efficiency, tests should be categorized based on execution time and purpose, for example:
+    .- Smoke Tests (5-10 min): Run on every commit to validate core functionalities.
+    .- Regression Tests (30-40 min): Executed nightly or triggered by specific tags.
+    .- Critical E2E Tests (10 min): Focus on essential workflows like checkout and login.
+    Additionally, redundant tests should be eliminated—for example, removing multiple tests that check the same endpoint with different data variations.
+    This streamlines execution while maintaining robust coverage.
+
+Explain how you would reorganize the automation framework structure to make it more scalable:
+    Response:
+    .-Create or update a modular structure; a well-organized framework improves maintenance and scalability.
+    This modular setup make it easier to maintain and onboard new teams efficiently.
+    .-Desing Patterns like a Page Object where we standarize commo interactions, such as logi()  for the UI automation, also service classes for centralize API calls
+    with structured functions, like user.create().
+    .-Create a environment configuration using files like config files to handle environment-specific variables like URLs or credentials without hardcoding them.
+
+Describe how you would implement parallel testing and what challenges you would anticipate:
+    Response:
+    To optimize parallel testing, I would start by configuring distributed test execution using native tools like Cypress, which allow splitting the test suite into independent
+    workers
+    In CI/CD, I’d leverage job matrices (such as in GitHub Actions) to parallelize tests by modules (e.g., smoke, regression) or by test files, ensuring each worker processes 
+    a balanced subset.
+    The biggest challenges would be report consolidation and managing infrastructure costs, requiring efficient log aggregation and resource optimization to maintain 
+    scalability without unnecessary overhead.  

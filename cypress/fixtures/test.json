@@ -1,0 +1,19 @@
+[
+{
+  "name": "Eduardo Leal",
+  "email": "test@test123.com",
+  "cp": "456789",
+  "username": "standard_user",
+  "lockedUsername": "locked_out_user",
+  "problemUsername": "problem_user",
+  "performanceUsername": "performance_glitch_user", 
+  "errorUsername": "error_user", 
+  "visualUsername": "visual_user", 
+  "password": "secret_sauce",
+  "wrongPassword": "secret_saucesss",
+  "errorMessagePassowrd": "Epic sadface: Username and password do not match any user in this service",
+  "errorMessageBlockUser": "Epic sadface: Sorry, this user has been locked out.",
+  "errorMessageUsername": "Epic sadface: Username is required",
+  "errorMessagePassword": "Epic sadface: Password is required"
+}
+]

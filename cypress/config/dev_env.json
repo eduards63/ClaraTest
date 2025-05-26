@@ -1,0 +1,7 @@
+{
+  "baseUrl": "https://www.dev.saucedemo.com",
+  "env": {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  }
+}

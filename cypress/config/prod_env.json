@@ -1,0 +1,13 @@
+{
+  "baseUrl": "https://www.saucedemo.com",
+  "env": {
+    "username": "standard_user",
+    "lockedUsername": "locked_out_user",
+    "problemUsername": "problem_user",
+    "performanceUsername": "performance_glitch_user", 
+    "errorUsername": "error_user", 
+    "visualUsername": "visual_user", 
+    "password": "secret_sauce",
+    "wrongPassword": "secret_saucesss"    
+  }
+}

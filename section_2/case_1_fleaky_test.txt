@@ -1,0 +1,35 @@
+You have noticed that 15% of automated tests intermittently fail in the CI/CD environment without a clear pattern. Describe:
+
+Methodology you would use to analyze and classify these failures:
+    Response:
+    First, I would gather data on CI/CD failures, including logs, screenshots, and Cypress videos, then classify them into categories like:
+    .-Timing Issues: Failures due to improper handling of dynamic elements, such as slow APIs or animations.  
+    .-External Dependencies: Unstable third-party APIs or shared data between tests.  
+    .-Fragile Selectors: XPaths or CSS selectors that vary between executions.  
+    .-Inconsistent Environment: Differences between local and CI setups, such as timeouts or configuration mismatches.  
+    
+    This structured approach helps pinpoint recurring issues and refine automation strategies for more reliable tests.
+
+Strategies to solve each type of identified problem:
+    Response:
+    For each category, I would apply the following strategies:
+
+    .-Timing Issues: Replace sleep() with smarter waits, such as cy.intercept() in Cypress. Implement conditional retries, but only for known errors like ElementNotVisibleException.
+    .-External Dependencies: Mock APIs using WireMock in test environments to reduce reliance on unstable third-party services. Ensure data isolation by generating unique IDs with UUID.
+    .-Fragile Selectors: Prioritize static attributes like data-testid instead of unreliable XPaths. Use Page Objects to centralize selectors, making maintenance easier and improving
+    test stability.
+    .-Inconsistent Environments: Containerize the CI setup with Docker to maintain consistency across executions. Adjust timeouts based on the environment, allowing for longer waits 
+    in CI compared to local runs.
+
+How you would evaluate the effectiveness of your solutions:
+    Response:
+    One of the ways would be:
+    Key Metrics:
+    .- Reduce flakiness to <2% within 2-3 sprints.
+    .- Average failure diagnosis time of less than 15 minutes per case.
+    Continuous Monitoring:
+    .-Creating dashboard displaying weekly flaky test trends, stable exectuion times and team retrospective to refine stratagies.
+    Regression Testing:
+    .-Create and run dedicate pipeline where run flaky test separately with increases retries.
+
+    

@@ -1,0 +1,7 @@
+{
+  "baseUrl": "https://staging.www.saucedemo.com",
+  "env": {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  }
+}
