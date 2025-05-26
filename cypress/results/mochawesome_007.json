@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-26T17:42:02.326Z",
+    "end": "2025-05-26T17:42:03.234Z",
+    "duration": 908,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8b2cc1a3-0577-408e-93e3-f9c26cfe33b2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\api_checkout\\api.cy.js",
+      "file": "cypress\\e2e\\api_checkout\\api.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "948b1307-fb71-465e-aa34-261a15106427",
+          "title": "PetStore API User Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Created a user with PetStore API",
+              "fullTitle": "PetStore API User Test Created a user with PetStore API",
+              "timedOut": null,
+              "duration": 486,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: 'https://petstore.swagger.io/v2/user',\n  body: userData,\n  headers: {\n    'Content-Type': 'application/json'\n  }\n}).then(postResponse => {\n  expect(postResponse.status).to.eq(200);\n  expect(postResponse.body).to.have.property('message', userData.id.toString());\n  cy.log('Created User:', JSON.stringify(postResponse.body));\n});",
+              "err": {},
+              "uuid": "4d4d6a64-60ab-48c6-8cd5-f28ffbf2d96a",
+              "parentUUID": "948b1307-fb71-465e-aa34-261a15106427",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4d4d6a64-60ab-48c6-8cd5-f28ffbf2d96a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 486,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

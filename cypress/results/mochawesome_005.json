@@ -1,0 +1,219 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-26T17:34:12.332Z",
+    "end": "2025-05-26T17:34:23.961Z",
+    "duration": 11629,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "66e99f6d-0158-4fa3-8e4a-3b53474a2ae9",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login\\login.cy.js",
+      "file": "cypress\\e2e\\login\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "778fc266-a0ae-4fc9-a187-6885de73187b",
+          "title": "Login Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login page successfully",
+              "fullTitle": "Login Tests Login page successfully",
+              "timedOut": null,
+              "duration": 1057,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.title().should('eq', 'Swag Labs'); // Check page title\nloginPage.submitLogin(Cypress.env('username'), Cypress.env('password')); // Perform login\ncy.url().should('include', '/inventory.html'); // Verify successful navigation",
+              "err": {},
+              "uuid": "cf584fca-a4cc-4251-a020-297fa67e022b",
+              "parentUUID": "778fc266-a0ae-4fc9-a187-6885de73187b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with invalid credentials",
+              "fullTitle": "Login Tests Login with invalid credentials",
+              "timedOut": null,
+              "duration": 941,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.title().should('eq', 'Swag Labs'); // Check page title\nloginPage.submitLogin(Cypress.env('username'), Cypress.env('wrongPassword')); // Attempt login with wrong password\nloginPage.errorMessage('Epic sadface: Username and password do not match any user in this service'); // Check error message",
+              "err": {},
+              "uuid": "cb412f6f-e6f0-4c1d-9210-f7140a473cf3",
+              "parentUUID": "778fc266-a0ae-4fc9-a187-6885de73187b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with locked out user",
+              "fullTitle": "Login Tests Login with locked out user",
+              "timedOut": null,
+              "duration": 821,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.title().should('eq', 'Swag Labs'); // Check page title\nloginPage.submitLogin(Cypress.env('lockedUsername'), Cypress.env('password')); // Attempt login with locked user\nloginPage.errorMessage('Epic sadface: Sorry, this user has been locked out.'); // Check error message",
+              "err": {},
+              "uuid": "8df938c7-816c-49d7-a420-67dd28761714",
+              "parentUUID": "778fc266-a0ae-4fc9-a187-6885de73187b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with problem user",
+              "fullTitle": "Login Tests Login with problem user",
+              "timedOut": null,
+              "duration": 965,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.title().should('eq', 'Swag Labs'); // Check page title\nloginPage.submitLogin(Cypress.env('problemUsername'), Cypress.env('password')); // Login as problem user\ncy.url().should('include', '/inventory.html'); // Verify navigation\n// Check that the image is not the expected one\ncy.get('#item_4_img_link').should('not.be.a.equal', '/static/media/sauce-backpack-1200x1500.0a0b85a3.jpg');\n// Add and remove item from cart\ncy.get('#add-to-cart-sauce-labs-backpack').click();\ncy.get('#remove-sauce-labs-backpack').dblclick();\ncy.get('#remove-sauce-labs-backpack').should('be.contain', 'Remove');",
+              "err": {},
+              "uuid": "1f7ab25b-5e4a-4499-9949-143fe1825b03",
+              "parentUUID": "778fc266-a0ae-4fc9-a187-6885de73187b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with performance user",
+              "fullTitle": "Login Tests Login with performance user",
+              "timedOut": null,
+              "duration": 5936,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const startTime = performance.now();\nconst loadTime = performance.now() - startTime;\ncy.log(`Time to load: ${loadTime.toFixed(0)} ms`); // Log load time\ncy.title().should('eq', 'Swag Labs'); // Check page title\nloginPage.submitLogin(Cypress.env('performanceUsername'), Cypress.env('password')); // Login as performance user\n// Log navigation performance metrics\ncy.window().then(win => {\n  const [entry] = win.performance.getEntriesByType('navigation');\n  console.table({\n    'Full Load': `${entry.loadEventEnd} ms`\n  });\n});\ncy.url().should('include', '/inventory.html'); // Verify navigation",
+              "err": {},
+              "uuid": "4dde78da-e6d6-409b-a56e-35a841647791",
+              "parentUUID": "778fc266-a0ae-4fc9-a187-6885de73187b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with error user",
+              "fullTitle": "Login Tests Login with error user",
+              "timedOut": null,
+              "duration": 936,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Handle expected uncaught exception\ncy.on('uncaught:exception', err => {\n  if (err.message.includes('Failed to remove item from cart')) {\n    console.log('Expected Error:', err.message);\n    return false; // Prevent Cypress from failing the test\n  }\n  return true; // Allow other errors to fail the test\n});\ncy.title().should('eq', 'Swag Labs'); // Check page title\nloginPage.submitLogin(Cypress.env('errorUsername'), Cypress.env('password')); // Login as error user\ncy.url().should('include', '/inventory.html'); // Verify navigation\n// Add and remove item from cart, check for correct button state\ncy.get('#item_4_img_link').should('not.be.a.equal', '/static/media/sauce-backpack-1200x1500.0a0b85a3.jpg');\ncy.get('#add-to-cart-sauce-labs-backpack').click();\ncy.get('#remove-sauce-labs-backpack').click();\ncy.get('#remove-sauce-labs-backpack').should('be.contain', 'Remove');",
+              "err": {},
+              "uuid": "206a62e6-1e7a-4663-b2ee-7cb08cc75860",
+              "parentUUID": "778fc266-a0ae-4fc9-a187-6885de73187b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with visual user",
+              "fullTitle": "Login Tests Login with visual user",
+              "timedOut": null,
+              "duration": 784,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.title().should('eq', 'Swag Labs'); // Check page title\nloginPage.submitLogin(Cypress.env('visualUsername'), Cypress.env('password')); // Login as visual user\ncy.url().should('include', '/inventory.html'); // Verify navigation\n// Check that the image is not the expected or error image\ncy.get('#item_4_img_link').should('not.be.a.equal', '/static/media/sauce-backpack-1200x1500.0a0b85a3.jpg');\ncy.get('#item_4_img_link').should('not.be.a.equal', '/static/media/sl-404.168b1cce.jpg');",
+              "err": {},
+              "uuid": "38f2722e-76f2-416e-bb65-cfbfe5fd5d8b",
+              "parentUUID": "778fc266-a0ae-4fc9-a187-6885de73187b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cf584fca-a4cc-4251-a020-297fa67e022b",
+            "cb412f6f-e6f0-4c1d-9210-f7140a473cf3",
+            "8df938c7-816c-49d7-a420-67dd28761714",
+            "1f7ab25b-5e4a-4499-9949-143fe1825b03",
+            "4dde78da-e6d6-409b-a56e-35a841647791",
+            "206a62e6-1e7a-4663-b2ee-7cb08cc75860",
+            "38f2722e-76f2-416e-bb65-cfbfe5fd5d8b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11440,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

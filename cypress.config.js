@@ -1,10 +1,11 @@
 const { defineConfig } = require("cypress");
 const fs = require("fs");
+const codeCoverageTask = require('@cypress/code-coverage/task');
 
 
 
 module.exports = defineConfig({
-  projectId: "g3repg",
+  projectId: "g3repg", //Cypress Dashboard code
 // Test report configuration using Mochawesome
   reporter: 'mochawesome',
   reporterOptions: {
@@ -22,6 +23,7 @@ module.exports = defineConfig({
       // This is the necessary code was added to consider the environment file dev_env, allowing the configuration to execute from "dev, staging or product"
       // (I decided to use the URL as if it were production because the tests are conducted directly on the page that would be production, not dev or staging.)
       // if no other environment is specified.
+      codeCoverageTask(on, config);
       const envFile = `./cypress/config/${config.env.configFile || 'prod_env'}.json`;
       const settings = JSON.parse(fs.readFileSync(envFile));
       

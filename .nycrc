@@ -1,0 +1,6 @@
+{
+  "reporter": ["text", "html", "lcov"],
+  "all": true,
+  "include": ["cypress/**/*.js"],
+  "exclude": ["**/*.spec.js"]
+}

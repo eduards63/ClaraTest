@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-26T17:42:05.527Z",
+    "end": "2025-05-26T17:42:09.800Z",
+    "duration": 4273,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ee8b66a6-45a7-4ee7-8807-cd1156db62c6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\api_checkout\\checkout.cy.js",
+      "file": "cypress\\e2e\\api_checkout\\checkout.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b2e33c5a-27eb-4f97-b82f-4cba725b3e8e",
+          "title": "Checkout Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Checkout with items in cart",
+              "fullTitle": "Checkout Tests Checkout with items in cart",
+              "timedOut": null,
+              "duration": 2040,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "inventoryPage.addCart('Sauce Labs Backpack'); // Add first item to cart\ninventoryPage.addCart('Sauce Labs Bike Light'); // Add second item to cart\ninventoryPage.goCart(); // Navigate to cart page\ncartPage.clickCheckoutButton(); // Click checkout button\ncy.url().should('include', '/checkout-step-one.html'); // Verify navigation to checkout step one",
+              "err": {},
+              "uuid": "d86c9124-3e64-45dd-805b-16c3ece727dc",
+              "parentUUID": "b2e33c5a-27eb-4f97-b82f-4cba725b3e8e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Complete checkout process",
+              "fullTitle": "Checkout Tests Complete checkout process",
+              "timedOut": null,
+              "duration": 2079,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('test').then(userData => {\n  const user = userData[0];\n  inventoryPage.addCart('Sauce Labs Backpack'); // Add item to cart\n  inventoryPage.goCart(); // Navigate to cart page\n  cartPage.clickCheckoutButton(); // Click checkout button\n  checkoutPage.fillCheckout(user.name, user.email, user.cp); // Fill in checkout form with fixture data\n  checkoutPage.continueButtons(); // Continue to next step\n  cy.url().should('include', '/checkout-step-two.html'); // Verify navigation to review step\n  checkoutPage.finishButton(); // Complete the purchase\n  cy.url().should('include', '/checkout-complete.html'); // Verify navigation to completion page\n  checkoutPage.ordenSuccess(); // Verify order success message\n});",
+              "err": {},
+              "uuid": "3971fd21-21bc-4f25-a236-b86907aaee62",
+              "parentUUID": "b2e33c5a-27eb-4f97-b82f-4cba725b3e8e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d86c9124-3e64-45dd-805b-16c3ece727dc",
+            "3971fd21-21bc-4f25-a236-b86907aaee62"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4119,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

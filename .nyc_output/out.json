@@ -1,0 +1,128 @@
+{
+  "D:/Projects/Technical_Test/cypress/pages(POM)/cartPage.js": {
+    "path": "D:/Projects/Technical_Test/cypress/pages(POM)/cartPage.js",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "D:/Projects/Technical_Test/cypress/pages(POM)/checkoutPage.js": {
+    "path": "D:/Projects/Technical_Test/cypress/pages(POM)/checkoutPage.js",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "D:/Projects/Technical_Test/cypress/pages(POM)/inventoryPage.js": {
+    "path": "D:/Projects/Technical_Test/cypress/pages(POM)/inventoryPage.js",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "D:/Projects/Technical_Test/cypress/pages(POM)/loginPage.js": {
+    "path": "D:/Projects/Technical_Test/cypress/pages(POM)/loginPage.js",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "D:/Projects/Technical_Test/cypress/plugins/index.js": {
+    "path": "D:/Projects/Technical_Test/cypress/plugins/index.js",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "D:/Projects/Technical_Test/cypress/support/commands.js": {
+    "path": "D:/Projects/Technical_Test/cypress/support/commands.js",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "D:/Projects/Technical_Test/cypress/support/e2e.js": {
+    "path": "D:/Projects/Technical_Test/cypress/support/e2e.js",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "D:/Projects/Technical_Test/cypress/e2e/api_checkout/api.cy.js": {
+    "path": "D:/Projects/Technical_Test/cypress/e2e/api_checkout/api.cy.js",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "D:/Projects/Technical_Test/cypress/e2e/api_checkout/checkout.cy.js": {
+    "path": "D:/Projects/Technical_Test/cypress/e2e/api_checkout/checkout.cy.js",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "D:/Projects/Technical_Test/cypress/e2e/login/login.cy.js": {
+    "path": "D:/Projects/Technical_Test/cypress/e2e/login/login.cy.js",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "D:/Projects/Technical_Test/cypress/e2e/login/loginFixture.cy.js": {
+    "path": "D:/Projects/Technical_Test/cypress/e2e/login/loginFixture.cy.js",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "D:/Projects/Technical_Test/cypress/e2e/product/cart.cy.js": {
+    "path": "D:/Projects/Technical_Test/cypress/e2e/product/cart.cy.js",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "D:/Projects/Technical_Test/cypress/e2e/product/navigation.cy.js": {
+    "path": "D:/Projects/Technical_Test/cypress/e2e/product/navigation.cy.js",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "D:/Projects/Technical_Test/cypress/results/assets/app.js": {
+    "path": "D:/Projects/Technical_Test/cypress/results/assets/app.js",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  }
+}
