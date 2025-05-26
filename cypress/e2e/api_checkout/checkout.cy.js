@@ -1,7 +1,7 @@
-import InventoryPage from "../pages(POM)/inventoryPage";
-import LoginPage from "../pages(POM)/loginPage";
-import CartPage from "../pages(POM)/cartPage";
-import CheckoutPage from "../pages(POM)/checkoutPage";
+import InventoryPage from "../../pages(POM)/inventoryPage";
+import LoginPage from "../../pages(POM)/loginPage";
+import CartPage from "../../pages(POM)/cartPage";
+import CheckoutPage from "../../pages(POM)/checkoutPage";
 
 // Test suite for the checkout process
 describe('Checkout Tests', () => {

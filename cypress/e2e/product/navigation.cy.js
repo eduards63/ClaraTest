@@ -1,5 +1,5 @@
-import InventoryPage from "../pages(POM)/inventoryPage";
-import LoginPage from "../pages(POM)/loginPage";
+import InventoryPage from "../../pages(POM)/inventoryPage";
+import LoginPage from "../../pages(POM)/loginPage";
 
 // Test suite for navigation functionality in the inventory page
 describe('Navigation test', () => {

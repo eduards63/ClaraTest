@@ -1,6 +1,6 @@
-import InventoryPage from "../pages(POM)/inventoryPage";
-import LoginPage from "../pages(POM)/loginPage";
-import CartPage from "../pages(POM)/cartPage";
+import InventoryPage from "../../pages(POM)/inventoryPage";
+import LoginPage from "../../pages(POM)/loginPage";
+import CartPage from "../../pages(POM)/cartPage";
 
 // Test suite for cart functionality
 describe('Cart Tests', () => {

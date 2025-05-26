@@ -16,6 +16,7 @@ module.exports = defineConfig({
   e2e: {
     screenshotOnRunFailure: true,
     video: true,
+    experimentalRunAllSpecs: true,
     setupNodeEvents(on, config) {
       // implement node event listeners here
       // This is the necessary code was added to consider the environment file dev_env, allowing the configuration to execute from "dev, staging or product"

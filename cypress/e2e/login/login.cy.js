@@ -1,4 +1,4 @@
-import LoginPage from "../pages(POM)/loginPage";
+import LoginPage from "../../pages(POM)/loginPage";
 
 // Test suite for login functionality
 describe('Login Tests', () => {

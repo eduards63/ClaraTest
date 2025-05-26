@@ -1,5 +1,5 @@
 // Import the Page Object Model for Login page
-import LoginPage from "../pages(POM)/loginPage";
+import LoginPage from "../../pages(POM)/loginPage";
 
 // Describe block for grouping login tests with fixture data
 describe('Login test with Fixture Data', () => {
